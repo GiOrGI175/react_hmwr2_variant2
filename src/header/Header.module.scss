@@ -1,5 +1,5 @@
 body {
-  header {
+  .header {
     background-color: #222222;
     box-shadow: 0px 0px 10.05px 0px #ffffff1a;
     height: 78px;
@@ -30,5 +30,12 @@ body {
         }
       }
     }
+  }
+}
+
+.header {
+  &.lightMode {
+    background-color: #dbdbdb;
+    box-shadow: 0px 0px 10.05px 0px #0000001a;
   }
 }

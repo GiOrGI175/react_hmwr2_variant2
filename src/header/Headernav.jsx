@@ -1,38 +1,32 @@
 import React, { useState } from 'react';
 import style from './HeaderNav.module.scss';
 
-const HeaderNav = ({ Islight }) => {
-  const updateTxtClr = () => {
-    return {
-      color: Islight ? '#455174CC' : '#ffffffcc',
-    };
-  };
-
+const HeaderNav = ({ islight }) => {
   return (
     <nav className={style.HeaderNav}>
       <ul>
         <li>
-          <a href='#' style={updateTxtClr()}>
+          <a href='#' className={islight ? style.lightMode : ''}>
             Home
           </a>
         </li>
         <li>
-          <a href='#' style={updateTxtClr()}>
+          <a href='#' className={islight ? style.lightMode : ''}>
             About
           </a>
         </li>
         <li>
-          <a href='#' style={updateTxtClr()}>
+          <a href='#' className={islight ? style.lightMode : ''}>
             Services
           </a>
         </li>
         <li>
-          <a href='#' style={updateTxtClr()}>
+          <a href='#' className={islight ? style.lightMode : ''}>
             Projects
           </a>
         </li>
         <li>
-          <a href='#' style={updateTxtClr()}>
+          <a href='#' className={islight ? style.lightMode : ''}>
             Contact
           </a>
         </li>

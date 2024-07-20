@@ -3,40 +3,22 @@ import style from './Main.module.scss';
 import MainNav from './Mainnav';
 import boy from '/boy.webp';
 
-const Main = ({ islight, setISlight }) => {
-  console.log(`mainis ${islight}`);
-
-  const updateBgClr = () => {
-    return {
-      backgroundColor: islight ? '#DBDBDB' : '#222222',
-    };
-  };
-
-  const updateTxtClr = () => {
-    return {
-      color: islight ? ' #455174CC' : '#FFFFFF',
-    };
-  };
-
-  const updateImgBg = () => {
-    return {
-      backgro: islight ? '#1e1d1d33' : '#222222',
-    };
-  };
-
+const Main = ({ islight }) => {
   return (
-    <main style={updateBgClr()}>
+    <main className={`${style.main} ${islight ? style['lightMode'] : ''}`}>
       <div className={style.main_container}>
         <div className={style.main_content}>
           <div className={style.text_contnet}>
-            <h1 style={updateTxtClr()}>
+            <h1 className={islight ? style['lightMode'] : ''}>
               <span>Hi, I am </span>Chukwukwe Chisom
             </h1>
             <p>Frontend Developer</p>
             <button>Download CV</button>
             <MainNav />
           </div>
-          <div className={style.ImgBox} style={updateImgBg()}>
+          <div
+            className={`${style.ImgBox} ${islight ? style['lightMode'] : ''}`}
+          >
             <img src={boy} alt='boy' />
           </div>
         </div>

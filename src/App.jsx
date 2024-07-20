@@ -5,7 +5,7 @@ import Main from './main/Main';
 import LanguageSection from './section/Languagesection';
 
 const App = () => {
-  const [islight, setISlight] = useState(true);
+  const [islight, setISlight] = useState(false);
 
   console.log(`appis ${islight}`);
 

@@ -1,5 +1,5 @@
 body {
-  main {
+  .main {
     background-color: #222222;
     transition: all 0.5s ease;
     .main_container {
@@ -26,6 +26,10 @@ body {
             transition: all 0.5s ease;
             span {
               margin-right: 50px;
+            }
+
+            &.lightMode {
+              color: #455174cc;
             }
           }
 
@@ -71,6 +75,11 @@ body {
           justify-content: center;
           align-items: center;
           border: 1px solid #a6bcfa;
+          transition: all 0.5s ease;
+
+          &.lightMode {
+            background-color: #1e1d1d33;
+          }
 
           img {
             width: 368px;
@@ -79,6 +88,11 @@ body {
           }
         }
       }
+    }
+  }
+  .main {
+    &.lightMode {
+      background-color: #dbdbdb;
     }
   }
 }
